@@ -1,43 +1,41 @@
-###  *🔍 Real-Time Custom Object Detection using TensorFlow 2.10*
+##  *🔍 Real-Time Custom Object Detection using TensorFlow 2.10*
 
 <sub>A complete end-to-end object detection pipeline built with TensorFlow 2.10, Keras, and SSD MobileNet. This project allows you to train your own detection model on custom images, run real-time inference, and leverage GPU acceleration using CUDA and cuDNN.</sub>
 
-#### *Features*
+### *Features*
 
-- <sub>Real-time object detection</sub>
-- <sub>Custom model training using your own dataset</sub>
-- <sub>TensorFlow 2 Object Detection API integration</sub>
-- <sub>Environment setup guide with CUDA & cuDNN</sub>
-- <sub>Training and evaluation scripts with live loss monitoring</sub>
+- <small>Real-time object detection</small>
+- <small>Custom model training using your own dataset</small>
+- <small>TensorFlow 2 Object Detection API integration</small>
+- <small>Environment setup guide with CUDA & cuDNN</small>
+- <small>Training and evaluation scripts with live loss monitoring</small>
 
-#### *🛠️ Setup Instructions*
+## *🛠️ Setup Instructions*
 
-##### Step 1 : 🔁 Clone the Repository
+### Step 1 : 🔁 Clone the Repository
 
-<small>[git clone https://github.com/your-username/your-repo.git
-cd your-repo](https://github.com/aaliyah2003/object-detection.git) </small>
+<small>[git clone (https://github.com/aaliyah2003/object-detection.git) </small>
 
-#### Step 2: 🐍 Create & Activate Virtual Environment
-
-##### Create
+### Step 2: 🐍 Create & Activate Virtual Environment
+### Create
 <small>python -m venv objectdetection</small>
 
-##### Activate
-##### On Windows
+### Activate
+### On Windows
 <small>.\objectdetection\Scripts\activate</small>
 
-##### On Linux/macOS
+### On Linux/macOS
 <small>source objectdetection/bin/activate</small>
 
-#### Step 3: 📦 Install Dependencies
+### Step 3: 📦 Install Dependencies
 
-<small>python -m pip install --upgrade pip</small>
+- python -m pip install --upgrade pip
 
-<small>pip install ipykernel</small>
+- pip install ipykernel
 
-<small>python -m ipykernel install --user --name=objectdetection</small>
+- python -m ipykernel install --user --name=objectdetection
 
-#### Step 4: 📸 Image Collection & Dataset Preparation
+### Step 4: 📸 Image Collection & Dataset Preparation
 
 1. Open Image Collection.ipynb to gather your training images.
 2. Manually split the collected data into:
@@ -46,10 +44,10 @@ cd your-repo](https://github.com/aaliyah2003/object-detection.git) </small>
 
 3. Ensure annotations and images are aligned correctly in both folders
 
-#### Step 5: 🔧 GPU Setup (CUDA & cuDNN Configuration)
-<sub>To leverage GPU acceleration during model training, ensure your system is properly configured with compatible versions of CUDA and cuDNN:</sub>
+### Step 5: 🔧 GPU Setup (CUDA & cuDNN Configuration)
+To leverage GPU acceleration during model training, ensure your system is properly configured with compatible versions of CUDA and cuDNN:
 
-#### Step 6: ✅ Compatibility Requirements
+### Step 6: ✅ Compatibility Requirements
 
 - <small>TensorFlow Version: 2.10.0</small>
 - <small>Required CUDA Version: 11.2</small>
@@ -57,9 +55,7 @@ cd your-repo](https://github.com/aaliyah2003/object-detection.git) </small>
 
 ##### 📥 Step-by-Step Installation
 <small>a. Download:</small>
-
 - <sub>[CUDA 11.2 (NVIDIA official site)](https://developer.nvidia.com/cuda-11.2.0-download-archive)</sub>
-
 - <sub>[cuDNN 8.1 for CUDA 11.2 (NVIDIA official site)](https://developer.nvidia.com/rdp/cudnn-archive)</sub>
 
 <small>b. After downloading:</small>
@@ -69,7 +65,7 @@ cd your-repo](https://github.com/aaliyah2003/object-detection.git) </small>
 
 <small>d. Run the TensorFlow verification script — ensure it ends with an OK status.</small>
 
-#### Step7: 🏋️ Model Training
+### Step7: 🏋️ Model Training
 
 Run the following command in your terminal (inside activated virtual environment):
 
@@ -78,21 +74,19 @@ python Tensorflow/models/research/object_detection/model_main_tf2.py \
 --pipeline_config_path=Tensorflow/workspace/models/my_ssd_mobnet/pipeline.config \
 --num_train_steps=2000
 
-###### 💡 Note: If you encounter compatibility errors during training, try reinstalling pycocotools and ensure all dependencies match TensorFlow 2.10 compatibility.
+#### 💡 Note: If you encounter compatibility errors during training, try reinstalling pycocotools and ensure all dependencies match TensorFlow 2.10 compatibility.
 
-####  Step 8: 📈 Evaluation & TensorBoard (Optional)
+###  Step 8: 📈 Evaluation & TensorBoard (Optional)
 <small>To evaluate your trained model:</small>
 
 tensorboard --logdir=Tensorflow/workspace/models/my_ssd_mobnet/eval
 
-#### Step 9: 👀 Real-Time Detection
+### Step 9: 👀 Real-Time Detection
 
 <small>Once your model is trained and exported:</small>
 
 - <sub>Load the model in your detection script or notebook (Training.ipynb)</sub>
-
 - <sub>Start detecting objects in real-time via webcam or image feed.</sub>
-
 
 ## ⚠️ Final Note
 
